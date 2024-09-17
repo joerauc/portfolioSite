@@ -11,4 +11,5 @@ def contact(request):
     return render(request, "contact.html")
 
 def project(request, id):
-    return render(request, "project.html")
+    project = get_object_or_404(Project, pk=id) # "Look for this model that contains this key"
+    return render(request, "project.html", {"project": project})

@@ -1,7 +1,3 @@
-<!-- Jinja allows us to write python-like code in an HTML file -->
- <!-- base.html is what the website will look like on most pages.
-        Other files add specific modifications -->
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -9,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Portfolio - Home{% endblock title %}</title> <!-- this block can now be changed for each template -->
+    <title>{% block title %}Portfolio - Home{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}"></link>
     {% block extrahead %}
     {% endblock extrahead %}

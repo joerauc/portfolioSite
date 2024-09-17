@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
-# order is important. Keep "" at the end.
+# Order is important. Keep "" at the end.
 urlpatterns = [
     path('admin/', admin.site.urls),
     # If nothing else is specified in URL, do the below. Pass on what comes after "" to main.urls

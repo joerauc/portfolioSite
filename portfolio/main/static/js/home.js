@@ -4,8 +4,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const projects = document.querySelectorAll(".project")
 
     function filterProjects() {
-        const nameQuery = nameSearch.ariaValueMax.toLowerCase();
+        const nameQuery = nameSearch.value.toLowerCase();
 
-        
+        projects.forEach((project) => {
+            const name = project.getAttribute('data-name')
+            const nameMatch = name.includes(nameQuery)
+
+            if (nameMatch) {
+                project.style.display = "";
+            } else {
+                project.style.display = "none";
+            }
+        })
     }
-}) /* Only do function once DOM content is loaded */
+
+    tags.forEach((tag) => {
+        tag.addEventListener("click", function() {
+            const selectedTag = this.getAttribute("data-tag")
+
+            projects.forEach((project) => {
+                const projectTags = project.getAttribute("data-tags")
+                if (projectTags.includes(selectedTag)) {
+                    project.style.display = ""
+                } else {
+                    project.style.display = "none"
+                }
+            })
+        })
+    })
+
+
+    nameSearch.addEventListener("keyup", filterProjects)
+})
