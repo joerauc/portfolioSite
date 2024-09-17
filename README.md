@@ -5,18 +5,30 @@ This is a portfolio website, meant to display the personal projects I've complet
 Make sure both Django and Pillow are installed. Django will work as our backend while Pillow will allow us to display photos for each project.
 
 Windows users enter these two lines in the console:
-'''pip install django'''
-'''pip install Pillow'''
+```
+pip install django
+```
+```
+pip install Pillow
+```
 
 Mac users enter these two lines in the console:
-'''pip3 install django'''
-'''pip3 install Pillow'''
+```
+pip3 install django
+```
+```
+pip3 install Pillow
+```
 
 While in the "portfolio" folder, run the following code to start the program.
 Windows users:
-'''python manage.py runserver'''
+```
+python manage.py runserver
+```
 Mac users:
-'''python3 manage.py runserver'''
+```
+python3 manage.py runserver
+```
 
 When you are done, hit "CTRL+C" in your code editor to stop the program.
 
